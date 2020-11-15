@@ -21,7 +21,7 @@ class Dataloader():
         img_rgb = cv.merge([b, g, r])
         cv.imwrite(path, img_rgb)
 
-    def load_data(self, batch_size=16):
+    def load_data(self, batch_size=5):
         path = glob('../dataset/train/*.jpg')
         self.n_batches = int(len(path) / batch_size)
         while 1:

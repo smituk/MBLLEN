@@ -187,7 +187,7 @@ nanstop = keras.callbacks.TerminateOnNaN()
 reducelearate = keras.callbacks.ReduceLROnPlateau(monitor='loss', factor=0.5, patience=2, min_lr=1e-10)
 earlystop = keras.callbacks.EarlyStopping(monitor='loss', min_delta=3, patience=0, verbose=0, mode='min')
 
-batch_size = 16
+batch_size = 5
 step_epoch = 200
 combined.fit_generator(
         data_loader.load_data(batch_size),
